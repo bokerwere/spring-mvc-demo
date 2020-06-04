@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+<bean id="javacheat" class="com.tiang.dependecy_loose_coupling.javaCheat"></bean>  
+<bean id="stdobject" class="com.tiang.dependecy_loose_coupling.MathCheat"></bean>
+<bean id="stdobject2" class="com.tiang.dependecy_loose_coupling.ScienceCheat"></bean>
+
+<bean id="std" class="com.tiang.dependecy_loose_coupling.Student">
+<property name="id" value="123456"/>
+<property name="cheat" ref="javacheat"/>
+</bean>
+<bean id="std1" class="com.tiang.dependecy_loose_coupling.Student">
+<property name="cheat" ref="stdobject2"/>
+
+</bean>
+
+</beans>

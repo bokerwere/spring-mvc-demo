@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+<bean id="stdobject" class="com.tiang.dependecy_injection_object_type.MathCheat"></bean>
+<bean id="std" class="com.tiang.dependecy_injection_object_type.Student">
+<property name="id" value="123456"/>
+<property name="cheat" ref="stdobject"/>
+</bean>
+<bean id="std1" class="com.tiang.dependecy_injection_object_type.AnotherStudent">
+<property name="cheat" ref="stdobject"/>
+
+</bean>
+
+</beans>
